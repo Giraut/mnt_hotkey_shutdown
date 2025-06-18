@@ -107,10 +107,14 @@ def main():
         keydown = d.keystate
 
         # Track the keys currently pressed
-        if keydown:
+        if keydown and scancode not in current_keys_pressed:
           current_keys_pressed.add(scancode)
-        elif scancode in current_keys_pressed:
+
+        elif not keydown and scancode in current_keys_pressed:
           current_keys_pressed.remove(scancode)
+
+        else:
+          continue
 
         # Show scancodes and simulate shutdown command if requested
         if args.show_scancodes:
