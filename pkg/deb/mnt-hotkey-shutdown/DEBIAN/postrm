@@ -1,0 +1,5 @@
+#!/bin/sh
+
+# We may have removed or changed the systemd unit file, so tell systemd to
+# reload
+systemctl daemon-reload

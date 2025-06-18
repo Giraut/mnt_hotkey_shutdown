@@ -1,0 +1,9 @@
+#!/bin/sh
+
+# Are we being called to remove the package?
+if [ "$1" = "remove" ]; then
+
+  # Stop and disable the service
+  systemctl disable --now mnt_hotkey_shutdown
+
+fi

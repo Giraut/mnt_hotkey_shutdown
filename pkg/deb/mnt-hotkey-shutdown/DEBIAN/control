@@ -1,0 +1,7 @@
+Package: mnt-hotkey-shutdown
+Version:
+Maintainer: Rosco <roskis@runbox.com>
+Description: MNT hotkey shutdown service
+Homepage: https://github.com/Giraut/mnt_hotkey_shutdown/
+Architecture: all
+Depends: python3 (>=3.5), python3-setproctitle, python3-evdev, systemd-sysv

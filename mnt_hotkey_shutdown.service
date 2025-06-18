@@ -1,0 +1,11 @@
+[Unit]
+Description=MNT hotkey shutdown service
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/mnt_hotkey_shutdown.py
+Restart=always
+RestartSec=1
+
+[Install]
+WantedBy=multi-user.target
