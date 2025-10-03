@@ -1,5 +1,5 @@
 # MNT hotkey shutdown
-### Version 0.0.1
+### Version 0.0.2
 
 A small program and systemd service to shut down a MNT laptop unconditionally with a keyboard key combination.
 
@@ -16,22 +16,22 @@ This is most useful with small pieces of foam taped to the screen bezel to press
 See [https://github.com/Giraut/ppa](https://github.com/Giraut/ppa) to add the PPA repository to your APT sources.
                                                                                  
 ```
-# apt install mnt-hotkey-shutdown
+sudo apt install mnt-hotkey-shutdown
 ```
 
 ### Manual installation
 
 ```
-# apt install python3-evdev
-# apt install python3-setproctitle
-# install -m 755 ./mnt_hotkey_shutdown.py /usr/local/bin
-# install -m 644 ./mnt_hotkey_shutdown.service /lib/systemd/system
+sudo apt install python3-evdev
+sudo apt install python3-setproctitle
+sudo install -m 755 ./mnt_hotkey_shutdown.py /usr/local/bin
+sudo install -m 644 ./mnt_hotkey_shutdown.service /lib/systemd/system
 ```
 
 ### Starting the service
 
 ```
-# systemctl enable --now mnt_hotkey_shutdown.service
+sudo systemctl enable --now mnt_hotkey_shutdown.service
 ```
 
 

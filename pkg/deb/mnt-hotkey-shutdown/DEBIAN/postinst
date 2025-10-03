@@ -3,3 +3,6 @@
 # We reinstalled the systemd unit file, so even though it may not have changed,
 # tell systemd to reload
 systemctl daemon-reload
+
+# Enable and start the service
+systemctl enable --now mnt_hotkey_shutdown
